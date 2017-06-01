@@ -1,0 +1,12 @@
+@import '{}/imports/client/stylesheets/base';
+@import '{}/imports/client/stylesheets/normalize';
+@import '{}/imports/client/stylesheets/common';
+@import '{}/imports/client/stylesheets/navigation';
+@import '{}/imports/client/stylesheets/components';
+@import '{}/imports/client/stylesheets/footer';
+
+// for tablet & mobile
+@import '{}/imports/client/stylesheets/common.device';
+@import '{}/imports/client/stylesheets/navigation.device';
+@import '{}/imports/client/stylesheets/components.device';
+@import '{}/imports/client/stylesheets/footer.device';

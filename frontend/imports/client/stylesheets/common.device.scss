@@ -1,0 +1,55 @@
+@include respond-to(mobile&tablet) {
+  h1 {
+    font-size: 35px;
+    span {
+      line-height: 5px;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  h4 {
+    margin: 20px auto;
+  }
+  h5 {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2px;
+  }
+  #main {
+    .content {
+      margin-bottom: -80px;
+      padding-bottom: 80px;
+    }
+  }
+  .transparent {
+    height: 60px;
+    top: -60px;
+  }
+}
+
+@include respond-to(tablet) {
+  .container {
+    padding: 0 40px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .css3-shadow:after{
+    @include drop_shadow(0px, 0px, 100px, 0px, rgba(0,0,0,0.3) !important);
+  }
+}
+
+@include respond-to(mobile) {
+  .container {
+    padding: 0 20px;
+    width: 100% !important;
+  }
+  .css3-shadow{
+    @include drop_shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0) !important);
+  }
+  .css3-shadow:after{
+    @include drop_shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0) !important);
+  }
+}

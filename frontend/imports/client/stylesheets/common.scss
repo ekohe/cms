@@ -1,0 +1,391 @@
+@import 'base';
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+              margin: 0;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "kozuka-gothic-pro", helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: $black;
+  background-color: #fff;
+  text-align: center;
+  > #react-app {
+    height: 100%;
+  }
+}
+
+// Change underline background color to yellow
+body ::selection,
+html ::selection {
+  background: yellow;
+}
+body ::-moz-selection,
+html ::-moz-selection {
+  background: yellow;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 56px;
+  span {
+    background-image: linear-gradient(180deg,transparent 78%,$yellow 0);
+    background-position: 0 -10px;
+  }
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 42px;
+  margin: 10px 0 25px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 30px auto;
+  line-height: 30px;
+  font-weight: 300;
+  a {
+    font-weight: 500;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  color: $grey;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 25px;
+}
+
+#main {
+  @include clearfix();
+  height: 100%;
+  .content {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    padding-bottom: 180px;
+    margin-bottom: -180px;
+  }
+}
+
+/* AGENCY: */
+
+.call_to_action_component .block .call_to_action .text
+.container {
+  max-width: 1200px;
+  margin: 0 60px;
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Drop shadow effect with box-shadow */
+.transparent{
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: -100px;
+  z-index: -1;
+  @include drop_shadow(0px, 2px, 15px, 0px, rgba(0,0,0,0) !important);
+  -webkit-animation: fadein 20s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 20s; /* Firefox < 16 */
+      -ms-animation: fadein 20s; /* Internet Explorer */
+       -o-animation: fadein 20s; /* Opera < 12.1 */
+          animation: fadein 20s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.css3-shadow{
+  width: 100%;
+  height: 100%;
+  position:relative;
+}
+.css3-shadow:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  @include drop_shadow(0px, 0px, 120px, 0px, rgba(0,0,0,0.3) !important);
+  bottom:0px;
+  left:10%;
+  right:10%;
+  width:80%;
+  height:50%;
+  @include rounded-borders(100%);
+}
+
+// slide show component
+.slick-slider {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  .slick-arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 1;
+    cursor: pointer;
+    svg {
+      width: 40px !important;
+      height: 40px !important;
+    }
+  }
+  .slick-next {
+    right: 0;
+    left: inherit;
+  }
+}
+.slick-list {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-slide {
+  display: none;
+  height: 100%;
+  min-height: 1px;
+  position: relative;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  img {
+    display: block;
+    margin: auto;
+  }
+
+}
+.slick-initialized .slick-slide {
+  display: inline-block;
+}
+
+//Time Clock
+.ap-analog-clock {
+  width: 84px;
+  height: 84px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.ap-analog-clock-board {
+  width: 100%;
+  height: 100%;
+  border: 2px solid $black;
+  display: inline-block;
+  position: relative;
+  @include rounded-borders(50%);
+  background-color: #fff;
+}
+.ap-analog-clock-board-inner {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  right: 18px;
+  bottom: 18px;
+}
+.ap-analog-letter {
+  height: 50%;
+  width: 12%;
+  position: absolute;
+  left: 44%;
+  top: 0;
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+.ap-analog-letter-title {
+  background-color: $black;
+  width: 10px;
+  height: 2px;
+  display: inline-block;
+  &.clock-mode-0 {
+    width: 2px;
+    height: 10px;
+    float: none;
+    vertical-align: top;
+  }
+  &.clock-mode-1 {
+    margin-bottom: 8px;
+  }
+}
+.ap-analog-clock-hand {
+  height: 50%;
+  width: 10%;
+  position: absolute;
+  left: 45%;
+  top: 0;
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+.ap-analog-clock-hand-bar-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: -8px;
+  display: inline-block;
+  text-align: center;
+}
+.ap-analog-clock-hand-bar {
+  background: #FF0099;
+  width: 24px;
+  height: 100%;
+  @include rounded-borders(5px);
+  display: inline-block;
+}
+.ap-analog-clock-hand-second {
+  .ap-analog-clock-hand-bar {
+    background-color: $black;
+  }
+}
+
+.ap-analog-clock-screw-container {
+  display: block;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  width: 20%;
+  bottom: 50%;
+  text-align: center;
+}
+.ap-analog-clock-screw {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  @include rounded-borders(50%);
+  background: $black;
+}
+
+// For chinese font
+#main.cn  {
+  font-family: $cn-font !important;
+  h1, h2, h3, h4, h5,
+  h1 span, h2 span, h3 span, h4 span, h5 span,
+  .call_to_action_component .block .call_to_action .text{
+    font-family: $cn-font !important;
+  }
+  a.primary_button,
+  button.primary_button,
+  a.secondary_button,
+  button.secondary_button,
+  a.white_button,
+  button.white_button,
+  .button_component a {
+    font-family: $cn-font !important;
+    line-height: 60px !important;
+  }
+  a.white_button,
+  button.white_button {
+    line-height: 54px !important;
+  }
+  .contact_form_component,
+  .job_application_component {
+    .input-field, .textarea-field {
+      font-family: $cn-font !important;
+    }
+  }
+  .column {
+    .text {
+      font-family: $cn-font !important;
+    }
+  }
+}
+.thankyou_popup.cn {
+  .content_box,
+  .button span,
+  h1 span {
+    font-family: $cn-font !important;
+  }
+}

@@ -1,0 +1,826 @@
+@include respond-to(mobile&tablet) {
+  .text_component {
+    width: 80%;
+    padding: 45px 0 30px;
+    h1{
+      line-height: 30px;
+    }
+    h2 {
+      margin: 5px 0 15px;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    &.radial_shade, &.radial_shade_only_title {
+      width: 100%;
+      padding: 45px 0 35px;
+      margin: 0 auto;
+      h1, h2, .description {
+        max-width: 80%;
+      }
+    }
+    &.radial_shade_only_title {
+      padding-bottom: 25px;
+    }
+  }
+  .button_component {
+    margin: 25px auto 10px;
+    height: auto;
+  }
+  .centered_image{
+    &.icons{
+      margin: 40px 0;
+      .ImagesSet{
+        img{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  a.primary_button,
+  button.primary_button,
+  a.secondary_button,
+  button.secondary_button,
+  a.white_button {
+    line-height: 46px !important;
+    height: 44px !important;
+    letter-spacing: 0.29px;
+    min-width: 160px !important;
+    border-bottom: solid 4px #00A79F !important;
+    span {
+      font-size: 14px !important;
+      padding: 0 35px !important;
+    }
+  }
+  a.secondary_button,
+  button.secondary_button {
+    span {
+      line-height: 10px !important;
+      padding: 0 15px !important;
+    }
+  }
+  .white_button, a.white_button {
+    line-height: 46px !important;
+    height: 46px !important;
+    border-bottom: 2px solid white !important;
+    span{
+      font-size: 14px !important;
+    }
+  }
+  .primary_button:before {
+    height: 0px;
+  }
+
+  .btn-3db:after{
+    height:3px !important;
+    transform:rotateX(0deg) !important;
+  }
+  .btn-3db:hover{
+    transform:rotateX(0deg) !important;
+  }
+
+  // call to action component
+  .call_to_action_component {
+    .block {
+      .call_to_action {
+        padding: 0 25px;
+        margin: 30px auto;
+        .icons {
+          padding: 20px auto 30px;
+          height: 80px;
+          img {
+            max-height: 100%;
+          }
+        }
+        .text {
+          font-size: 18px;
+          line-height: 32px;
+        }
+        .button_component {
+          margin: 30px auto 20px;
+        }
+        a.primary_button span,
+        button.primary_button span {
+          padding: 0 60px !important;
+        }
+      }
+    }
+    &.one_action {
+      .block {
+        .call_to_action {
+          margin: 50px auto;
+        }
+      }
+    }
+  }
+  //Two Columns Component
+  .two_columns_component{
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    @include flexbox;
+    .column{
+      width: 100%;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 42px;
+        margin: 10px 0 25px;
+      }
+      ol{
+        li{
+          span{
+            font-size: 15px;
+            line-height: 30px;
+          }
+        }
+      }
+      .icons {
+        padding: 0 22px 50px;
+        max-width: 33%;
+      }
+    }
+  }
+  //Paper Content Component
+  .paper_content_component {
+    margin-bottom: -60px;
+    .block {
+      padding: 0 60px;
+    }
+    h1 {
+      max-width: 100%;
+      padding: 30px 0 20px;
+    }
+    p {
+      max-width: 100%;
+      padding: 0 15px;
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+    .icons {
+      display: inline-block;
+      padding: 0 22px 30px;
+      vertical-align: middle;
+      max-width: 33%;
+    }
+  }
+  //Job Card Component
+  .job_card_component,
+  .office_card_component {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 40px;
+    h2 {
+      font-size: 26px;
+    }
+    h4 {
+      font-size: 15px;
+      margin: 15px auto;
+    }
+    .inner {
+      padding-bottom: 30px;
+    }
+    .block{
+      height: auto !important;
+      .hidden_button{
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+  .office_card_component{
+    &:last-child{
+      margin-bottom: 50px;
+    }
+  }
+  .call_to_action_component {
+    margin-bottom: 30px;
+  }
+  // Icons Set Component
+  .icons_set_component, .icons_set_urls_component {
+    .IconsSet {
+      width: 50%;
+      .title {
+        font-size: 15px;
+        margin: 15px auto 70px;
+        letter-spacing: 2.49px;
+        line-height: 15px;
+      }
+    }
+    &.four_icons {
+      .IconsSet {
+        width: 50%;
+      }
+    }
+  }
+  //Text Image
+  .text_image_side_by_side_component {
+    padding: 60px 0;
+    .side_text {
+      font-size: 15px;
+    }
+    .title {
+      margin: 0 auto 20px;
+      font-size: 15px
+    }
+    .subtitle {
+      margin-bottom: 20px;
+    }
+    .side_image {
+      max-width: 280px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  // Filmstrip gallery component
+  .filmstrip_gallery_component {
+    height: 250px;
+    .filmstrip {
+      height: 250px;
+      img{
+        height: 250px;
+      }
+    }
+  }
+  //Projects grid component
+  .projects_grid_component {
+    margin-bottom: 0;
+    .project {
+      .logo {
+        width: 90px;
+        height: 90px;
+        margin-left: -45px;
+        margin-top: -45px;
+      }
+    }
+  }
+  .banner_component {
+    .logo {
+      max-width: 120px;
+    }
+    .links {
+      bottom: 10px;
+      height: 46px;
+      a {
+        margin-right: 10px !important;
+      }
+      svg {
+        margin-left: 10px !important;
+      }
+    }
+    a.white_button {
+      min-width: inherit !important;
+      span {
+        padding: 0 15px 0 8px !important;
+      }
+    }
+  }
+  //Office map component
+  .office_map_component {
+    .google_map{
+      height: 46px !important;
+      width: 160px !important;
+      line-height: 46px !important;
+      right: 80px !important;
+      bottom: 90px !important;
+      div{
+        height: 46px !important;
+      }
+      span{
+        font-size: 14px !important;
+      }
+    }
+  }
+  .office_contact_component {
+    margin-bottom: 60px;
+  }
+  //Slide Show Component
+  .slide_show_component {
+    .slick-next{
+      svg{
+        position: absolute;
+        left: -18px;
+      }
+    }
+    .slick-prev{
+      svg{
+        position: absolute;
+        left: -23px;
+      }
+    }
+  }
+  #main.cn  {
+    a.primary_button,
+    button.primary_button,
+    a.secondary_button,
+    button.secondary_button,
+    a.white_button,
+    .button_component a,
+    button.white_button {
+      line-height: 40px !important;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .banner_component, .text_image_cover_component {
+    .banner, .cover {
+      height: 320px;
+    }
+    .title {
+      font-size: 36px;
+      width: 520px;
+      line-height: 56px;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        margin-left: -260px;
+      }
+    }
+  }
+  .contact_form_component {
+    padding-top: 60px;
+    margin: 0 0 30px;
+    .info, .form {
+      padding: 0;
+    }
+    .info {
+      padding-right: 75px;
+    }
+  }
+  .thankyou_popup{
+    .content_box{
+      padding: 20px 20px !important;
+    }
+    .title{
+      margin: 0px;
+    }
+    .actions{
+      padding: 0 0 20px !important;
+      .button{
+        line-height: 44px !important;
+        height: 44px !important;
+        letter-spacing: 0.29px;
+        min-width: 160px !important;
+        border-bottom: solid 4px #00A79F !important;
+        span{
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+
+  .text_image_cover_component{
+    .container {
+      margin-bottom: 0;
+    }
+    .block{
+      margin-top: -170px;
+      padding: 30px 40px 40px;
+      h1{
+        line-height: 45px;
+      }
+      h2{
+        width: 100%;
+        margin-top: 0px;
+      }
+      .button_component {
+        margin: 30px auto 0px;
+      }
+      .caption{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .vertical_image_list_component{
+    margin-top: 0;
+    margin-bottom: 50px !important;
+    .column{
+      .logos{
+        margin: 40px 0 0 0;
+        img{
+          max-height: 50px;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  .bullet_points_component{
+    width: 80%;
+    margin: 0 auto 40px auto;
+    ol{
+      li{
+        font-size: 10px;
+        span{
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  .three_columns_component{
+    margin-bottom: 0px !important;
+    .block{
+        padding: 40px 20px 0 20px;
+      .icons{
+        img{
+          max-height: 80px;
+        }
+      }
+      .column{
+        padding: 0 3%;
+        h5{
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+        h4{
+          font-size: 15px;
+          line-height: 24px;
+          margin-top: 10px;
+        }
+      }
+      .button_component{
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .testimonials {
+    padding: 0 20px;
+  }
+
+  //Offices grid component
+  .offices_grid_component, .projects_grid_component {
+    .office, .project {
+      height: 171px;
+      .bg {
+        height: 171px;
+      }
+    }
+    .office button {
+      margin-top: -22px !important;
+    }
+  }
+
+  .job_application_component {
+    margin-bottom: 30px !important;
+    .button_component {
+      .secondary_button {
+        div{
+          height: 42px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+
+  // 404 Error Page
+  .error_404{
+    .text_component{
+      padding: 150px 0 30px;
+    }
+    .button_component{
+      margin: 30px auto 150px;
+    }
+    .banner{
+      height: 250px;
+      background-size: contain !important;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .dropzone .text {
+    font-size: 14px;
+    margin-top: 70px;
+  }
+  .text_component h1{
+    line-height: 45px;
+  }
+  .banner_component, .text_image_cover_component {
+    .banner {
+      height: 320px;
+    }
+    .title {
+      width: auto;
+      font-size: 25px;
+      padding: 0 35px;
+      line-height: 40px;
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        margin-left: 0;
+        left: 0;
+      }
+    }
+    .links {
+      height: auto;
+      width: 100%;
+      bottom: 6px;
+      a.white_button {
+        margin: 3px !important;
+        height: 40px !important;
+        line-height: 38px !important;
+        svg {
+          display: none !important;
+        }
+        span {
+          font-size: 12px !important;
+          padding: 0 10px !important;
+        }
+      }
+    }
+  }
+  .office_contact_component {
+    margin-bottom: 50px;
+  }
+  .call_to_action_component {
+    margin-bottom: 0;
+  }
+  #main.cn .links a.white_button {
+    line-height: 35px !important;
+  }
+  a.white_button {
+    border-color: white !important;
+  }
+  .contact_form_component {
+    padding-top: 0;
+    margin: 0 0 60px;
+    .info, .form {
+      width: 100%;
+      float: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+    .info {
+      margin-top: 45px;
+    }
+    .button_component {
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+    }
+  }
+  .call_to_action_component {
+    .block {
+      padding-bottom: 40px;
+      .call_to_action {
+        width: 100%;
+        border-right: none !important;
+        padding: 0;
+        margin: 0;
+        .inner {
+          height: auto !important;
+        }
+      }
+    }
+  }
+
+  .text_image_cover_component{
+    .cover {
+      height: 215px;
+    }
+    .container{
+      margin-bottom: 0px !important;
+    }
+
+    .block{
+      margin-top: 0px;
+      padding: 30px 0px 0;
+      @include drop_shadow(0px, 2px, 15px, 0px, rgba(0,0,0,0) !important);
+      .button_component {
+        margin-bottom: 45px;
+      }
+    }
+    .transparent {
+      display: none;
+    }
+  }
+
+  .vertical_image_list_component{
+    margin-bottom: 0px !important;
+    .column{
+      width: 100%;
+      margin-bottom: 60px;
+      .logos{
+        max-height: 50px;
+        width: 50%;
+        margin: 50px 0 0 0;
+        @include flexbox;
+        display: inline-flex;
+        vertical-align: top;
+        img{
+          max-height: 50px;
+          max-width: 130px;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .bullet_points_component{
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .three_columns_component{
+    margin-bottom: 0px !important;
+    .block{
+      padding: 0;
+      @include drop_shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0) !important);
+      .column{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+      .button_component {
+        margin: 0 auto 45px;
+      }
+    }
+    .transparent {
+      display: none;
+    }
+  }
+
+  //Two Columns Component
+  .two_columns_component{
+    .column{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      @include drop_shadow(0px, 0px, 0px, 0px, rgba(0,0,0,0) !important);
+      h2 {
+        text-align: left;
+      }
+      .text {
+        display: block;
+        text-align: left;
+      }
+      .icons {
+        padding: 0 22px 50px;
+        max-width: 48%;
+        text-align: center;
+      }
+    }
+  }
+
+  //Paper Content Component
+  .paper_content_component {
+    margin-bottom: -120px;
+    .block {
+      padding: 0;
+      @include drop_shadow(0px, 2px, 15px, 0px, rgba(0,0,0,0) !important);
+    }
+    h1 {
+      max-width: 100%;
+      padding: 30px 0 20px;
+    }
+    p {
+      max-width: 100%;
+      padding: 0 15px;
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+    .icons {
+      max-width: 48%;
+      text-align: center;
+    }
+  }
+  //Job Card Component
+
+  .job_card_component,
+  .office_card_component {
+    padding: 10px 0;
+    &:last-child {
+      margin-bottom: -10px;
+    }
+    .block .card {
+      height: 228px;
+    }
+    .inner {
+      padding: 30px;
+      min-height: 0;
+      h2{
+        margin: 0 0 20px;
+      }
+      h4{
+        line-height: 24px;
+        svg{
+          opacity: 0.5;
+        }
+      }
+      p{
+        svg{
+          opacity: 0.5;
+        }
+        font-weight: 300;
+      }
+    }
+    .hidden_button{
+      top: 120px !important;
+    }
+  }
+  .office_card_component {
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+  // Icons Set Component
+  .icons_set_component, .icons_set_urls_component {
+    .IconsSet {
+      width: 100%;
+      .title {
+        margin: 15px auto 60px;
+        line-height: 25px;
+      }
+    }
+    &.four_icons {
+      .IconsSet {
+        width: 100%;
+      }
+    }
+  }
+  //Text Image
+  .text_image_side_by_side_component {
+    display: block;
+    padding: 35px 30px;
+    .side_text,
+    .side_image {
+      width: 100%;
+      margin: 0px;
+    }
+    .side_image{
+      margin: 40px auto 0px;
+    }
+  }
+  //Offices grid component
+  .offices_grid_component, .projects_grid_component {
+    .office, .project {
+      width: 100%;
+      float: none;
+      height: 150px;
+      .bg {
+        height: 150px;
+      }
+    }
+    &.offices_4, &.offices_3 {
+      .office {
+        width: 100%;
+      }
+    }
+  }
+  //Office map component
+  .office_map_component {
+    padding: 0;
+    height: 350px;
+    .map{
+      height: 300px;
+    }
+    .google_map{
+      right: 50px !important;
+      bottom: 75px !important;
+    }
+  }
+
+  //Job application component
+  .job_application_component {
+    margin-bottom: 60px !important;
+    .button_component {
+      margin-bottom: 0;
+      .secondary_button {
+        display: none !important;
+      }
+      .primary_button {
+        float: none !important;
+      }
+    }
+  }
+
+  // 404 Error Page
+  .error_404{
+    .content{
+      padding-top: 115px;
+    }
+    .text_component{
+      padding: 0px auto 30px;
+    }
+    .button_component{
+      margin: 30px auto 30px;
+    }
+    .banner{
+      height: 220px;
+      background-size: cover !important;
+    }
+    .content{
+      .banner_component:first-child{
+        display: none;
+      }
+    }
+  }
+
+}

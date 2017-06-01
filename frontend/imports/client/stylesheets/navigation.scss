@@ -1,0 +1,179 @@
+@import 'base';
+
+.header {
+  padding: 35px 50px;
+  background-color: transparent;
+  background-image: linear-gradient(-1deg, rgba(0,0,0,0.00) 19%, rgba(0,0,0,0.4) 100%);
+  @include clearfix();
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  a {
+    text-decoration: none;
+  }
+  @include respond-to(lg-screen) {
+    padding: 40px 80px;
+  }
+  .logo {
+    width: 97px;
+    height: 30px;
+    margin-top: 7px;
+    float: left;
+  }
+  .menu-right {
+    float: right;
+  }
+
+  ul.menu {
+    float: left;
+    margin: 10px 0 0;
+    li {
+      display: inline-block;
+      margin: 0 0 0 30px;
+      a {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 6px;
+        white-space: nowrap;
+        border-bottom: 4px solid transparent;
+      }
+      &.active a {
+        border-bottom-color: white;
+      }
+    }
+  }
+
+  nav.language {
+    width: 110px;
+    margin-left: 30px;
+    padding: 0;
+    position: relative;
+    float: right;
+    height: 50px;
+    button {
+      border-radius: 0 !important;
+    }
+    svg {
+      position: absolute;
+      fill: white !important;
+      top: 10px;
+      right: 10px;
+      pointer-events: none;
+    }
+  }
+  &.sticky {
+    background-color: rgba(255,255,255,0.95);
+    background-image: none;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 10px 50px;
+  }
+}
+
+// for popover language
+.language-menu {
+  position: relative;
+  top: -5px;
+  padding: 0px !important;
+  line-height: 40px !important;
+  height: 50px !important;
+  color: white !important;
+  border: 0 !important;
+  text-align: left !important;
+  opacity: 1;
+  background-color: rgba(0,0,0,0.3) !important;
+  div {
+    div {
+      font-size: 18px;
+      color: white !important;
+      border: none !important;
+    }
+  }
+}
+
+.sticky .language-menu {
+  background-color: transparent !important;
+  div {
+    div {
+      color: black !important;
+    }
+  }
+}
+
+span.language-menu-item {
+  font-size: 18px !important;
+  -webkit-appearance: none;
+}
+
+.mobile_navigation {
+  display: none;
+}
+
+.black_logo {
+  display: none;
+}
+
+//Add class 'dark' if it's a bright top banner, ex: team show page
+html.dark, html.dark-header {
+  .header {
+    color: $black !important;
+    background-image: none;
+    a {
+      color: $black !important;
+    }
+    nav.language svg {
+      fill: $black !important;
+    }
+    ul.menu li.active a {
+      border-color:  $black !important;
+    }
+  }
+  .desktop_navigation, .mobile_navigation {
+    .logo {
+      -webkit-filter: brightness(0);
+      filter: brightness(0);
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        img {
+          display: none;
+        }
+        .black_logo {
+          display: block;
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+
+  .mobile_navigation {
+    background-image: none;
+    .cover {
+      .logo {
+        -webkit-filter: brightness(1);
+        filter: brightness(1);
+      }
+    }
+    .toggle-menu svg {
+      fill: $black !important;
+    }
+  }
+}
+html.dark {
+  .banner_component {
+    .logo,
+    .title,
+    .links{
+      color: $black !important;
+      -webkit-filter: brightness(0);
+      filter: brightness(0);
+    }
+  }
+}

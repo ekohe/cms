@@ -1,0 +1,131 @@
+h1 {
+  font-family: "kozuka-gothic-pro", helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 42px;
+}
+
+div {
+  font-family: "kozuka-gothic-pro", helvetica, sans-serif;
+  font-weight: 300;
+}
+
+#app {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app-inner-container {
+  display: flex;
+  flex: 1;
+}
+
+#navigation {
+  margin: '0px 32px 16px 0px';
+  padding-top: 20px;
+  opacity: 0;
+  flex: 0 0 250px;
+  order: -1;
+  transition: visibility 0s linear 0.1s, opacity 0.1s ease-in, all 0.1s ease-in;
+}
+
+#navigation.visible {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+#navigation.hidden {
+  flex: 0;
+  width: 0;
+}
+
+#main {
+  margin: 0px 20px 0px 20px;
+  -webkit-flex: 1;
+          flex: 1;
+}
+
+#main h2 {
+  margin: 15px 20px 10px 0px;
+}
+
+div.preview {
+  color: rgba(0, 0, 0, 0.541176);
+  font-size: 14px;
+}
+
+.dropzone {
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 220px;
+}
+
+.dropzone .imagePreview {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.dropzone .imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dropzone .status {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 110px;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  color: black;
+  text-shadow: 0px 0px 3px rgba(255,255,255,1);
+}
+
+.image_details_preview {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.error, .preview.error {
+  color: red;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.page_type {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  width: 95%;
+}
+
+.page_type > div {
+  width: 50%;
+  padding: 10px;
+}
+
+.connect, .pending_authorization {
+  text-align: center;
+}
+
+.connect {
+  padding-top: 250px;
+}
+
+a {
+  color: black;
+}

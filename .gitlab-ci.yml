@@ -1,0 +1,39 @@
+stages:
+  - deploy
+
+variables:
+  SSH_USER: "gitlab-runner"
+
+before_script:
+  - export LANG=C.UTF-8
+  - export LANGUAGE=C.UTF-8
+  - export LC_ALL=C.UTF-8
+  - set locale LANG=C.UTF-8
+  - gem install mina -v "=0.3.8"
+  - gem install mina-multistage -v "=1.0.2"
+  - eval `ssh-agent -s`
+  - ssh-add /home/gitlab-runner/.ssh/id_rsa
+  - mkdir ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan -H ekohe.com >> ~/.ssh/known_hosts
+  - ssh-keyscan -H 173.193.19.115 >> ~/.ssh/known_hosts
+
+deploy_staging:
+  stage: deploy
+  script:
+    - cd admin
+    - mina staging deploy
+    - cd ../frontend
+    - mina staging deploy
+  only:
+    - develop
+
+deploy_production:
+  stage: deploy
+  script:
+    - cd admin
+    - mina production deploy
+    - cd ../frontend
+    - mina production deploy
+  only:
+    - master

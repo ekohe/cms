@@ -1,0 +1,95 @@
+@import 'base';
+
+.footer {
+  background-color: $black;
+  color: white;
+  font-weight: 300;
+  @include clearfix();
+  .menu-content  {
+    width: 100%;
+    padding: 60px 50px;
+    @include clearfix();
+    .menu-item {
+      width: 20%;
+      padding: 0 25px;
+      float: left;
+      padding: 0 15px;
+      a {
+        color: white;
+        text-align: left;
+        display: block;
+        font-size: 14px;
+        line-height: 30px;
+        cursor: pointer;
+        -webkit-transition-property: color,opacity;
+        -moz-transition-property: color,opacity;
+        -o-transition-property: color,opacity;
+        transition-property: color,opacity;
+        -webkit-transition-duration: 300ms,300ms;
+        -moz-transition-duration: 300ms,300ms;
+        -o-transition-duration: 300ms,300ms;
+        transition-duration: 300ms,300ms;
+      }
+      a.title {
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 25px;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        &:hover {
+          color: #bfbfbf;
+        }
+      }
+      .sub-menu a {
+        transition-duration: 300ms;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+        opacity: 0.4;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .copy-right {
+    @include clearfix();
+    padding: 0 65px;
+    height: 60px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 60px;
+    background-color: #222;
+    a {
+      transition-duration: 300ms;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+      opacity: 0.4;
+      color: #ccc;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .pull-left {
+      float: left;
+    }
+    .pull-right {
+      float: right;
+    }
+  }
+  .centered_image.icons{
+    display: inline-block;
+    width: 20%;
+    padding: 20px 0 20px 15px;
+    margin-top: 0;
+    text-align: left;
+    float: right;
+    .ImagesSet {
+      margin: 0 20px 0 0;
+      img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+
